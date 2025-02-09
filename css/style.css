@@ -1,0 +1,183 @@
+html, body {
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 18px;
+    overflow: hidden;
+}
+
+.border-10 {
+    border-width: 10px !important;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../fonts/MaterialIcons-Regular.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Material Icons Two Tone';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons Two Tone'),
+    local('MaterialIconsTwoTone-Regular'),
+    url(../fonts/MaterialIconsTwoTone-Regular.woff2) format('woff2')
+}
+
+@font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons Outlined'),
+    local('MaterialIconsOutlined-Regular'),
+    url(../fonts/MaterialIconsOutlined-Regular.woff2) format('woff2')
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 28px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    vertical-align: top;
+    direction: ltr;
+    padding-bottom: 0px;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-icons-two-tone {
+    font-family: 'Material Icons Two Tone';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 28px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    vertical-align: top;
+    direction: ltr;
+    padding-bottom: 0px;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 28px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    vertical-align: top;
+    direction: ltr;
+    padding-bottom: 0px;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+}
+
+.tick {
+    font-size: 20px;
+}
+
+.arrow {
+    font-size: 22px;
+    vertical-align: top;
+}
+
+.inner {
+    position: absolute;
+    width: 100%;
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+tr[class^="subrow"] {
+    font-size: 12px;
+    display: none
+}
+
+span[id^="filename_"] {
+    border-bottom: 1px;
+    border-bottom: #818182;
+    left: 25px;
+    z-index: 100;
+}
+
+.rotate {
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.rotate.down {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.filename {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.openFiles {
+    display: none;
+}
+
+.openFiles.visible {
+    display: block;
+}
+
+#controlsWrapper .row, #transport-controls {
+    height: 40px;
+    z-index: 6;
+}
+
+#transport-controls {
+    position: absolute;
+    z-index: 7;
+}
+
+div#contentWrapper {
+    background: #dbe2ed url(../img/Redwing-flight.png);
+    background-size: cover;
+}
+
+.zoom {
+    font-size: 35px;
+    vertical-align: text-bottom;
+}
