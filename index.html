@@ -32,6 +32,11 @@
     <style>
         /* Custom CSS Styling */
 
+        fieldset {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
         .container-padded {
             padding: 3rem;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -50,8 +55,8 @@
 	}
   .table-responsive {
   /* overflow-x: hidden; Hide the scrollbar */
-  position: relative; /* Ensure child elements are positioned properly */
-}
+    position: relative; /* Ensure child elements are positioned properly */
+  }
 
 .sticky-col {
     position: -webkit-sticky;
@@ -59,7 +64,7 @@
     left: 0;
     background-color: white; /* Optional: to avoid overlap issues */
     z-index: 1; /* Ensure it stays above other columns */
-}
+  }
 
 .table {
   width: 100%; 
@@ -330,7 +335,9 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
     </table>
   </div>
 </div>
- <h4  id="downloads"><span class="me-3">Downloads</span></h4>
+ 
+ <fieldset class="mt-3 pb-3">
+  <label class="h5 m-3" id="downloads">Downloads</label>
 	<div class="row ">
 		<div class="col-md-6">
 			<div class="mb-3 text-center">
@@ -346,8 +353,8 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
 	    		</a> 
 			</div>
 		</div>
-<hr>
-		<div class="col-md-6">
+    <hr class="w-75" style="margin: 0 auto">
+		<div class="col-md-6 mt-3">
 			<div class="mb-3 text-center">
 		    <a id="latest-mac" href="https://github.com/Mattk70/Chirpity-Electron/releases/latest" onclick="_paq.push(['trackGoal', 1]);">
         		<button id="get-latest-mac" type="button" class="btn"><svg  class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"></path></svg>
@@ -356,27 +363,30 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="mb-3 text-center">
+			<div class="mb-3 text-center mt-3">
 		    <a id="latest-intel-mac" href="https://github.com/Mattk70/Chirpity-Electron/releases/latest" onclick="_paq.push(['trackGoal', 1]);">
         		<button id="get-latest-intel-mac" type="button" class="btn"><svg  class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"></path></svg>
 			Get the latest Intel Mac release from Github</button>
 		    </a>
 			</div>
 		</div>
-<hr>
-		<div class="col-md-6">
-			<div class="mb-3 text-center">
+    <hr class="w-75" style="margin: 0 auto">
+		<div class="col-md-6 mt-3">
+			<div class="mb-3 text-center align-middle">
 		    <a id="latest-linux" href="https://github.com/Mattk70/Chirpity-Electron/releases/latest" onclick="_paq.push(['trackGoal', 1]);">
         		<button id="get-latest-linux" type="button" class="btn text-bg-warning"><img  class="download-logo" width="50" height="50" style="mix-blend-mode: multiply" src="linux.png">
 			Download an AppImage<br> for Linux</button>
 		    </a>
 			</div>
 		</div>
+    <div class="col-md-6 mt-3">
+      <div class="justify-content-center w-100 d-flex">
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="matthew_kirkland" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+      </div>
+    </div>
 	</div>
-<div class="justify-content-center w-100 d-flex">
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="matthew_kirkland" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-</div>
 
+</fieldset>
 <hr>
 <h6>First released to the public on February 8<sup>th</sup>, 2024, Chirpity has regular users in 45 countries and counting!</h6>
 <div class="flag-slider">
