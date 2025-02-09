@@ -763,6 +763,7 @@ fetch('https://api.github.com/repos/Mattk70/Chirpity-Electron/releases?per_page=
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     document.documentElement.setAttribute("data-bs-theme", savedTheme);
+    themeToggle.checked = savedTheme === "dark";
   }
 
   themeToggle.addEventListener("click", () => {
