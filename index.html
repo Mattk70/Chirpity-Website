@@ -53,7 +53,13 @@
   position: relative; /* Ensure child elements are positioned properly */
 }
 
-
+.sticky-col {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    background-color: white; /* Optional: to avoid overlap issues */
+    z-index: 1; /* Ensure it stays above other columns */
+}
 
 .table {
   width: 100%; 
@@ -223,9 +229,9 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
       <fieldset class="border rounded mb-3 p-2">
         <legend class="h6">Platform and Languages</legend>
         <ul>
-          <li>Versions are available for Windows, MacOS (both M-series and Intel), Linux.</li>
-          <li>The Interface can be translated into any one of 11 languages</li>
-          <li>Birds common names are available in 28 languages.</li>
+          <li>Versions are available for Windows, MacOS (both M-series and Intel) and Linux.</li>
+          <li>The interface can be translated into any one of 11 languages</li>
+          <li>Birds' common names are available in 28 languages.</li>
         </ul>
       </fieldset>
       <fieldset class="border rounded mb-3 p-1">
@@ -243,7 +249,7 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
       <fieldset class="border rounded mb-3 p-2">
         <legend class="h6">Media Capabilities</legend>
         <ul>
-          <li><!--span class="badge text-bg-danger">New!</span --> <strong>Broad file format support:</strong> Supports WAV files in 32bit float PCM, those larger than 2GB (RF64). You can also analyse and save common compressed file formats.</li>
+          <li><!--span class="badge text-bg-danger">New!</span --> <strong>Broad file format support:</strong> Supports WAV files in 32bit float PCM and those larger than 2GB (RF64). You can also analyse and save common compressed file formats.</li>
           <li><strong>Support for BEXT and GUANO metadata:</strong> If GUANO metadata is embedded in the file, this is read, and the recording location and timestamp are set automatically</li>
           <li><strong>Enhance audio:</strong> Audio filters allow you to adjust background noise.</li>
           <li><strong>Organise files:</strong> Organise your source recordings into a structured audio library.</li>
@@ -263,11 +269,11 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
         <li><strong>Compare results with reference calls:</strong> 
           Compare any species detection with reference calls sourced from <a href="https://www.xeno-canto.org" target="_blank">xeno-canto</a>
           <svg width="16" height="18"><use xlink:href="#external-link-icon"></use></svg>, sorted by call type. </li>
-        <li><strong>Background Analysis:</strong> Analyze audio in the background while you continue to explore the
+        <li><strong>Background Analysis:</strong> Analyse audio in the background while you continue to explore the
             timeline.</li>
         <li><strong>Retrospective adjustment:</strong> Adjust the detection list or confidence threshold either before or <i>after</i> analysis. </li>
         <li><strong>Easily Refine Results:</strong> Update the details of records, amend or delete them. Add records manually.</li>
-        <li><strong>Enhance Sensitivity:</strong> Highlight and analyze specific segments for more sensitivity.</li>
+        <li><strong>Enhance Sensitivity:</strong> Highlight and analyse specific segments for more sensitivity.</li>
         <li><strong>Custom lists:</strong> Limit reported detections to birds in your location at the time of year, birds active at night, or provide a custom list to specify precisely the species of interest to you.</li>
       </ul>
       </fieldset>
@@ -282,10 +288,11 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
   Firstly using the native Chirpity detection model, then BirdNET within Chirpity, and finally BirdNET using the 
   BirdNET Analyzer. The number in brackets shows how much faster than real-time this represents:</p>
   <div class="table-responsive">
-    <table role="table" class="table border table-striped">
+    <table role="table" class="table table-striped">
+      <caption><b>Machine Specs: </b><i><small>1.CPU: 8th Gen, Core i5 8400, 6-core "Coffee Lake", GPU: Nvidia 1660 Super. 2. 2022 M2 Macbook Pro 13", 8GB RAM</small></i></caption>
     <thead>
     <tr>
-    <th>Model</th>
+    <th class="sticky-col">Model</th>
     <th>App Launch</th>
     <th>Core i5 CPU</th>
     <th>Core i5 GPU</th>
@@ -293,9 +300,9 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
     <th>M2 WebGPU</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody  class="table-group-divider">
     <tr>
-    <td>Chirpity native</td>
+    <td class="sticky-col">Chirpity native</td>
     <td>&lt; 3s</td>
     <td>80s (140x)</td>
     <td><strong>28s (388x)</strong></td>
@@ -303,7 +310,7 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
     <td><strong>44s (252x)</strong></td>
     </tr>
     <tr>
-    <td>Chirpity BirdNET</td>
+    <td class="sticky-col">Chirpity BirdNET</td>
     <td>&lt;  3s</td>
     <td>106s (106x)</td>
     <td>270s (41x)</td>
@@ -311,7 +318,7 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
     <td>N/A</td>
     </tr>
     <tr>
-    <td>BirdNET Analyzer</td>
+    <td class="sticky-col">BirdNET Analyzer</td>
     <td><strong>&gt;  100s</strong></td>
     <td><strong>549s (20x)</strong></td>
     <td>N/A</td>
@@ -426,7 +433,7 @@ Available for Windows, Mac and Linux platforms, download Chirpity today!</p>
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
 		    </div>
-                  <p class="card-text">An introductary tour of the key features of Chirpity.</p>
+                  <p class="card-text">An introductory tour of the key features of Chirpity.</p>
                 </div>
               </div>
             </div>
@@ -496,7 +503,7 @@ if (navigator.userAgent.includes('Macintosh')){
   macHTML = `
   <div class="alert alert-warning">Be careful to select the correct installer. Chirpity-X.Y.Z<font color="red">-arm64</font>.pkg is built for Apple Silicon and will not work on older Intel Macs. 
 	Chirpity-X.Y.Z.pkg is for Intel Macs and will not work on Apple Silicon (M-series) machines.</div>
-Because the installer hasn't been digitally signed, there are some addditional steps needed over a standard installation. What follows is a walk through.<br />
+Because the installer hasn't been digitally signed, there are some additional steps needed over a standard installation. What follows is a walk through.<br />
 <b> Please follow the instructions carefully!</b>
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
@@ -533,7 +540,7 @@ Because the installer hasn't been digitally signed, there are some addditional s
 	<ol>
 	  <li>Navigate to your Downloads folder</li>
 	  <li><b>Important!</b> Hold down the 'control ^' key and then select the pkg file</li>
-	  <li>A menu shoulld appear, select the top link 'Open'</li>
+	  <li>A menu should appear, select the top link 'Open'</li>
 	  <li>A warning will be displayed, like this one:</li>
 	  <img src="img/mac-warning.png" height="418" width="328" alt="macOS cannot verify the developer of chirpity-x.x.x-arm64.pkg">
 	  <li>If you choose to select 'open' the installer will run - just follow the installation prompts</li>
@@ -759,7 +766,7 @@ fetch('https://api.github.com/repos/Mattk70/Chirpity-Electron/releases?per_page=
   });
 </script>
 
-
+</div>
 </body>
 
 </html>
