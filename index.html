@@ -35,6 +35,29 @@
     />
     <style>
       /* Custom CSS Styling */
+    .shine {
+      position: relative;
+      display: inline-block;
+      color: #ffc107;
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #464646 100%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: shine 10s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 200% center;
+      }
+      10% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: -200% center;
+      }
+    }
 
       fieldset {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -368,8 +391,7 @@
                     >xeno-canto</a
                   >
                   <svg width="16" height="18">
-                    <use xlink:href="#external-link-icon"></use></svg
-                  >, sorted by call type.
+                    <use xlink:href="#external-link-icon"></use></svg>, sorted by call type.
                 </li>
                 <li>
                   <strong>Background Analysis:</strong> Analyse audio in the
@@ -404,28 +426,23 @@
           </div>
         </div>
       </div>
-      <h4>Performance Comparison</h4>
+      <h4>Performance Comparison  <span class="badge text-bg-warning">Updated</span></h4>
       <div class="m-2">
         <p>
           Many people familiar with BirdNET have used the "BirdNET Analyzer GUI"
           for automated bird call identification. Due to many optimisations made
           in the application, Chirpity is able to perform the analysis
           significantly faster. The following benchmark data show the time taken
-          to analyse a file just over 3 hours long. Firstly using the native
-          Chirpity detection model, then BirdNET within Chirpity, and finally
-          BirdNET using the BirdNET Analyzer. The number in brackets shows how
+          to analyse a 1GB 48k WAV file (just over 3 hours long). Firstly using 
+          Chirpity's Nocmig detection models, then BirdNET within Chirpity, and finally
+          BirdNET using the BirdNET Analyzer (tested on version 1.5.1). The number in brackets shows how
           much faster than real-time this represents:
         </p>
         <div class="table-responsive">
           <table role="table" class="table table-striped">
             <caption>
-              <b>Machine Specs: </b
-              ><i
-                ><small
-                  >1.CPU: 8th Gen, Core i5 8400, 6-core "Coffee Lake", GPU:
-                  Nvidia 1660 Super. 2. 2022 M2 Macbook Pro 13", 8GB RAM</small
-                ></i
-              >
+              <b>Machine Specs: </b><i><small>1.CPU: 8th Gen, Core i5 8400, 6-core "Coffee Lake", GPU:
+                  Nvidia 1660 Super. 2. 2022 M2 Macbook Pro 13", 8GB RAM</small></i>
             </caption>
             <thead>
               <tr>
@@ -439,20 +456,20 @@
             </thead>
             <tbody class="table-group-divider">
               <tr>
-                <td class="sticky-col">Chirpity native</td>
+                <td class="sticky-col">Nocmig models</td>
                 <td>&lt; 3s</td>
                 <td>80s (140x)</td>
-                <td><strong>28s (388x)</strong></td>
+                <td><strong>18.2s (614x)</strong></td>
                 <td>67s (167x)</td>
-                <td><strong>44s (252x)</strong></td>
+                <td><strong>40s (279x)</strong></td>
               </tr>
               <tr>
                 <td class="sticky-col">Chirpity BirdNET</td>
                 <td>&lt; 3s</td>
                 <td>106s (106x)</td>
-                <td>270s (41x)</td>
-                <td><strong>75s (148x)</strong></td>
-                <td>N/A</td>
+                <td><strong class="shine">11.5s (972x)</strong></td>
+                <td>75s (148x)</td>
+                <td><strong>22s (500x)</strong></td>
               </tr>
               <tr>
                 <td class="sticky-col">BirdNET Analyzer</td>

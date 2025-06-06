@@ -6,5 +6,6 @@
         "Matomo",
         "Stanislas",
         "Wroza"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
