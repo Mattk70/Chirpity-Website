@@ -459,15 +459,15 @@
                 <td class="sticky-col">Nocmig models</td>
                 <td>&lt; 3s</td>
                 <td>80s (140x)</td>
-                <td><strong>18.2s (614x)</strong></td>
+                <td><strong>13.8s (811x)</strong></td>
                 <td>67s (167x)</td>
-                <td><strong>40s (279x)</strong></td>
+                <td><strong>25s (447x)</strong></td>
               </tr>
               <tr>
                 <td class="sticky-col">Chirpity BirdNET</td>
                 <td>&lt; 3s</td>
                 <td>106s (106x)</td>
-                <td><strong class="shine">11.5s (972x)</strong></td>
+                <td><strong id="bestTime" class="shine">11.3s (995x)</strong></td>
                 <td>75s (148x)</td>
                 <td><strong>22s (500x)</strong></td>
               </tr>
@@ -1219,7 +1219,7 @@ Because the installer hasn't been digitally signed, there are some additional st
         const themeToggle = document.getElementById("themeToggle");
 
         // Check and apply the user's saved preference
-        const savedTheme = localStorage.getItem("theme");
+        let savedTheme = localStorage.getItem("theme");
         if (savedTheme) {
           document.documentElement.setAttribute("data-bs-theme", savedTheme);
           themeToggle.checked = savedTheme === "dark";
@@ -1230,12 +1230,19 @@ Because the installer hasn't been digitally signed, there are some additional st
             document.documentElement.getAttribute("data-bs-theme");
           const newTheme = currentTheme === "light" ? "dark" : "light";
 
+
           // Apply the new theme
           document.documentElement.setAttribute("data-bs-theme", newTheme);
 
           // Save the preference
           localStorage.setItem("theme", newTheme);
+          savedTheme = newTheme;
+          const shine = document.getElementById('bestTime')
+          shine.classList.toggle('shine', savedTheme === 'dark')
         });
+
+        const shine = document.getElementById('bestTime')
+        shine.classList.toggle('shine', savedTheme === 'dark')
       </script>
     </div>
   </body>
