@@ -426,7 +426,7 @@
           </div>
         </div>
       </div>
-      <h4>Performance Comparison  <span class="badge text-bg-warning">Updated</span></h4>
+      <h4>Performance Comparison</h4>
       <div class="m-2">
         <p>
           Many people familiar with BirdNET have used the "BirdNET Analyzer GUI"
@@ -483,7 +483,6 @@
           </table>
         </div>
       </div>
-
       <fieldset class="mt-3 pb-3">
         <label class="h5 m-3" id="downloads">Downloads</label>
         <div class="row">
@@ -610,6 +609,58 @@
         </div>
       </fieldset>
       <hr />
+      <!-- <h4><span class="badge text-bg-warning">New</span> Additional Classifiers</h4>
+      <div class="m-2">Chirpity allows Buy-Me-A-Coffee members to train and import additional classifiers to expand its classification capabilities. </div>
+      <div class="m-2 row">
+        <div class="col-auto">
+          <div class="card" style="width: 20rem">
+            <div style="position: relative;">
+              <img src="img/Rhinolophus_hipposideros.png" class="card-img-top" alt="Chirpity Batpack">
+              <div style="
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.1);
+                color: gray;
+                font-size: 0.75rem;
+                padding: 0.25rem;
+                text-align: right;">
+                Image: JozefBem1009, CC BY 4.0 <br>via Wikimedia Commons
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Chirpity BatPack</h5>
+              <p class="card-text">The BatPack allows the review (and comparison) of vocalisations in ultrasonic recordings, and the classifier is trained to identify 26 European bat species.</p>
+              <a href="downloads/Bats v1.0.zip" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem">
+            <div style="position: relative;">
+              <img src="img/Natterjack_Toad.png" class="card-img-top" alt="FrogNET">
+              <div style="
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.4);
+                color: gray;
+                font-size: 0.75rem;
+                padding: 0.25rem;
+                text-align: right;">
+                Image: Bernard DUPONT from FRANCE, CC BY-SA 2.0, via Wikimedia Commons
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">FrogNET</h5>
+              <p class="card-text">This classifier enhances the performance of BirdNET in recording locations where amphibians are regularly calling.</p>
+              <a href="downloads/FrogNET v1.0.1.zip" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <h6>
         First released to the public on February 8<sup>th</sup>, 2024, Chirpity
         has regular users in 45 countries and counting!
@@ -1115,7 +1166,8 @@ Because the installer hasn't been digitally signed, there are some additional st
         const releasesAccordion = document.getElementById("releasesAccordion");
         let exeCount = 0,
           pkgCount = 0,
-          AppImageCount = 0;
+          AppImageCount = 0,
+          currentCount = 0;
         fetch(
           "https://api.github.com/repos/Mattk70/Chirpity-Electron/releases?per_page=100"
         )
@@ -1126,17 +1178,22 @@ Because the installer hasn't been digitally signed, there are some additional st
               const release = data[i];
               if (release.name === "0.10.1") break;
               if (release.prerelease) {
-                limit++;
                 continue;
+                // Skip pre-releases
               }
               if (release.assets.length) {
                 // download count
                 release.assets.forEach((asset) => {
-                  if (asset.browser_download_url.endsWith("pkg")) pkgCount+=asset.download_count;
-                  else if (asset.browser_download_url.endsWith("exe"))
+                  if (asset.browser_download_url.endsWith("pkg")) {
+                    pkgCount+=asset.download_count;
+                    i === 0 && (currentCount+=asset.download_count);
+                  } else if (asset.browser_download_url.endsWith("exe")) {
                     exeCount+=asset.download_count;
-                  else if (asset.browser_download_url.endsWith("AppImage"))
+                    i === 0 && (currentCount+=asset.download_count);
+                  } else if (asset.browser_download_url.endsWith("AppImage")) {
                     AppImageCount+=asset.download_count;
+                    i === 0 && (currentCount+=asset.download_count);
+                  }
                 });
                 if (i < limit) {
                   const releaseItem = document.createElement("div");
@@ -1175,7 +1232,7 @@ Because the installer hasn't been digitally signed, there are some additional st
               }
             }
             // Function to add a Bootstrap pill containing the download count
-            function addDownloadCountPill(pkgCount, exeCount, AppImageCount) {
+            function addDownloadCountPill(pkgCount, exeCount, AppImageCount, currentCount) {
               // Check if usernameValue is 'matt'
               if (usernameValue === "matt") {
                 // Create a <span> element with Bootstrap classes for the pill
@@ -1188,7 +1245,7 @@ Because the installer hasn't been digitally signed, there are some additional st
                 );
                 const count = exeCount + pkgCount + AppImageCount;
                 // Set the inner text of the pill to the download count
-                pillSpan.innerText = `Windows: ${exeCount}, Mac: ${pkgCount}, Linux ${AppImageCount}. Total ${count}`;
+                pillSpan.innerText = `Windows: ${exeCount}, Mac: ${pkgCount}, Linux ${AppImageCount}. Total ${count}. Latest: ${currentCount}.`;
 
                 // Create a <span> element to contain the pill and label
                 const containerSpan = document.createElement("span");
@@ -1203,7 +1260,7 @@ Because the installer hasn't been digitally signed, there are some additional st
             }
 
             // Example usage: Call the function with the download count if userNameValue is 'Matt'
-            addDownloadCountPill(pkgCount, exeCount, AppImageCount);
+            addDownloadCountPill(pkgCount, exeCount, AppImageCount, currentCount);
           })
           .catch((error) => {
             console.error("Error fetching releases:", error);
