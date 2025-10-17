@@ -276,29 +276,34 @@
                 </blockquote>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card">
-                <div style="position: relative;">
-                <img src="img/WA-Chirpity-Web-Banner-Micro2-03-500x375px.png" class="card-img-top" alt="FrogNET">
-                </div>
-                <div class="card-body">
-                <h5 class="card-title">Wildlife Acoustics</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <div class="col-md-4 col-sm-12 mt-2">
+            <div class="card mt-2">
+                <!-- <div style="position: relative;"> -->
+                <img src="img/Chirpity Website Banner Ad_Whimbrel_500x375.png" class="card-img-top" alt="FrogNET">
+                
+                <div class="card-body pb-0">
+                <!-- <h5 class="card-title">Wildlife Acoustics</h5> -->
+                    <!-- <p class="card-text"> -->
+                        <p>Just because you didn't see it, doesn't mean it wasn't there.
+                        Record nocmig flight calls with the Song Meter&reg; Micro 2.</p>
+                        <ul>
+                          <li>Discover elusive species & passage migrants</li>
+                          <li>Identify migration timing & stopover sites</li>
+                        </ul>
+                        <a href="https://www.wildlifeacoustics.com/products/song-meter-micro-2"><button class="btn btn-info w-100" style="min-width: 100px">Learn more</button></a>
                         <figure>
-                            <figcaption class="blockquote-footer">
-                                <cite title="Source Title">Sponsored content</cite>
-                            </figcaption>
+                          <figcaption class="blockquote-footer mt-2 pb-0">
+                            <cite title="Source Title">Sponsored content</cite>
+                          </figcaption>
                         </figure>
-                    </p>
+                    <!-- </p> -->
                 </div>
             </div>
         </div>
     </div>
 
-
       <!-- Features -->
-      <h4>Key Features</h4>
+      <h4>Free Features</h4>
 
       <!-- Modal -->
       <div
@@ -447,6 +452,59 @@
           </div>
         </div>
       </div>
+
+      <!-- Member Features -->
+      <h4>Member-only Features</h4>
+      <p>The following capabilities are added when you become a Chirpity member through <a href="https://www.buymeacoffee.com/matthew_kirkland" target="_blank">Buy-me-a-coffee</a>. All these additional features are available for a trial period when you first install the application:</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <fieldset class="border rounded mb-3 p-2">
+              <legend class="h6">Analysis improvements</legend>
+              <ul>
+                <li>
+                  <strong>GPU backend:</strong> Use your computer's GPU to accelerate audio analysis up to 10x.
+                </li>
+                <li>
+                  <strong>Show all detections:</strong> View all detections in the displayed timeline, not just the currently selected one.
+                </li>
+                <li><strong>Combine detections:</strong> Show the results from multiple classifiers in a single results view.</li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="col-12 col-md-6">
+            <fieldset class="border rounded mb-3 p-2">
+              <legend class="h6">Custom classifiers</legend>
+              <ul>
+                <li>
+                  <!--span class="badge text-bg-danger">New!</span -->
+                  <strong>Train your own model:</strong> Create a custom classifier using your own audio samples to add new species, improve detection accuracy, or adapt to specific environments.
+                </li>
+                <li>
+                  <strong>Import and export:</strong> Easily share your trained models with others by exporting and importing them.
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="col-12 col-md-6">
+            <fieldset class="border rounded mb-3 p-1">
+              <legend class="h6">Workflow enhancements</legend>
+              <ul>
+                <li>
+                  <strong>Multiple Archives:</strong> Choose the location for your archive database. Create separate archives for different projects, locations or time periods.
+                </li>
+                <li>
+                  <strong>User-configurable hot keys:</strong> Assign your own keyboard shortcuts for common actions including changing species ID, adding a comment or label to a detection.
+                </li>
+                <li>
+                  <strong>Import Records:</strong> Import existing records from a CSV, allowing results to be shared with others for further analysis.
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </div>
+      </div>      
+      <!-- End member only Features  -->
       <h4>Performance Comparison</h4>
       <div class="m-2">
         <p>
@@ -632,14 +690,13 @@
       <hr />
       <h4><span class="badge text-bg-warning">New</span> Additional Classifiers</h4>
       <div class="m-2">
-        Chirpity allows Buy-Me-A-Coffee members to train and import additional classifiers to expand its classification capabilities. 
+        Chirpity allows <a href="https://www.buymeacoffee.com/matthew_kirkland" target="_blank">Buy-me-a-coffee</a> members to train and import additional classifiers to expand its classification capabilities. 
         <p>
-          To use the classifier below, download the ZIP file, extract it and import the model from Chirpity's train menu.
+          To use the classifiers below, download the ZIP file, extract it and import the model from Chirpity's train menu.
         </p>
 
       </div>
       <div class="m-2 row">
-        
         <!-- <div class="col-auto">
           <div class="card" style="width: 20rem">
             <div style="position: relative;">
@@ -664,7 +721,7 @@
             </div>
           </div>
         </div> -->
-        <div class="col">
+        <div class="col-auto">
           <div class="card" style="width: 20rem">
             <div style="position: relative;">
               <img src="img/Natterjack_Toad.png" class="card-img-top" alt="FrogNET">
@@ -690,10 +747,22 @@
             </div>
           </div>
         </div>
-                            <!-- <figure class="figure float-end m-3 w-50">
-                    <img src="img/WA-Chirpity-Web-Banner-Micro2-03-500x375px.png" alt="Wildlife Acoustics" class="img-fluid rounded">
-                    </figure> -->
-      </div>
+      
+        <div class="col">
+            <div class="card" style="width: 20rem">
+              <img src="img/Perch.png" class="card-img-top" alt="Perch V2">
+              <div class="card-body">
+                <h5 class="card-title">Perch V2</h5>
+                <p class="card-text">
+                  Perch is a bioacoustics model developed by the <a href="https://research.google.com/">Google Research</a> team. It is trained to classify nearly 15,000 species, of which 10,000 are birds. 
+                  <b>N.B.</b> this is a Preview release and will only work with Windows PCs. It also requires <a href="https://github.com/Mattk70/Chirpity-Electron/releases/">Chirpity v5.3.0</a> or later to run. Before downloading, reading the <a href="https://github.com/Mattk70/Chirpity-Electron/discussions/395">guidance is highly recommended</a>.
+                </p>
+                <a href="https://github.com/Mattk70/Chirpity-Website/releases/download/v1.0.0/Perch.V2.for.Windows.zip" class="btn btn-primary">Download for Windows</a>
+                <!-- <a href="https://github.com/Mattk70/Chirpity-Website/releases/download/v1.0.0/Perch.V2.for.M-series.Mac.zip" class="btn btn-primary mt-3 disabled">Download for M-series Macs</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
       <h6>
         First released to the public on February 8<sup>th</sup>, 2024, Chirpity
         has regular users in 45 countries and counting!
@@ -1076,6 +1145,7 @@ Because the installer hasn't been digitally signed, there are some additional st
           .then((data) => {
             // Update the download link and button text for the latest release
             const latestRelease = data;
+            const VERSION = latestRelease.tag_name;
             const assets = latestRelease.assets;
             let macDownloadLink,
               macIntelDownloadLink,
@@ -1124,17 +1194,19 @@ Because the installer hasn't been digitally signed, there are some additional st
 
             winDownloadLinkElement.href = winDownloadLink;
             winDownloadButton.innerHTML =
-              '<svg class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M1.589 23.55L1.572 8.24l18.839-2.558V23.55zM23.55 5.225l25.112-3.654V23.55H23.55zM48.669 26.69l-.006 21.979-25.112-3.533V26.69zM20.41 44.736l-18.824-2.58-.001-15.466H20.41z"></path></svg>Download Chirpity<br /> for Windows';
+              `<svg class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M1.589 23.55L1.572 8.24l18.839-2.558V23.55zM23.55 5.225l25.112-3.654V23.55H23.55zM48.669 26.69l-.006 21.979-25.112-3.533V26.69zM20.41 44.736l-18.824-2.58-.001-15.466H20.41z"></path></svg>Download Chirpity ${VERSION}<br /> for Windows`;
             winPortableDownloadLinkElement.href = winPortableDownloadLink;
             winPortableDownloadButton.innerHTML =
-              '<div class="align-items-center"><img src="usb-24724.png" height="50" class="me-2"><svg class="me-2" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M1.589 23.55L1.572 8.24l18.839-2.558V23.55zM23.55 5.225l25.112-3.654V23.55H23.55zM48.669 26.69l-.006 21.979-25.112-3.533V26.69zM20.41 44.736l-18.824-2.58-.001-15.466H20.41z"></path></svg></div>Download a Portable Chirpity<br /> for Windows';
+              `<div class="align-items-center"><img src="usb-24724.png" height="50" class="me-2"><svg class="me-2" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M1.589 23.55L1.572 8.24l18.839-2.558V23.55zM23.55 5.225l25.112-3.654V23.55H23.55zM48.669 26.69l-.006 21.979-25.112-3.533V26.69zM20.41 44.736l-18.824-2.58-.001-15.466H20.41z"></path></svg></div>Download a Portable Chirpity<br /> ${VERSION} for Windows`;
             macDownloadLinkElement.href = macDownloadLink;
             macDownloadButton.innerHTML =
-              '<svg  class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"></path></svg>Download Chirpity<br />for M Series Macs';
+              `<svg  class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"></path></svg>Download Chirpity ${VERSION}<br />for M Series Macs`;
             macIntelDownloadLinkElement.href = macIntelDownloadLink;
             macIntelDownloadButton.innerHTML =
-              '<svg  class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"></path></svg>Download Chirpity<br />for Intel Macs';
+              `<svg  class="download-logo" width="50" height="50" viewBox="0 0 50 50" focusable="false"><path d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"></path></svg>Download Chirpity ${VERSION}<br />for Intel Macs`;
             linuxDownloadLinkElement.href = linuxDownloadLink;
+            linuxDownloadButton.innerHTML =
+              `<img class="download-logo" width="50" height="50" style="mix-blend-mode: multiply" src="linux.png" />Download Chirpity ${VERSION}<br />for Linux (AppImage)`;
 
             //scroll to installation on click, after a bit
             const install = document.getElementById("installation");
