@@ -1287,11 +1287,13 @@ Because the installer hasn't been digitally signed, there are some additional st
           pkgCount = 0,
           AppImageCount = 0,
           currentCount = 0;
-        fetch(
-          "https://api.github.com/repos/Mattk70/Chirpity-Electron/releases?per_page=100"
-        )
-          .then((response) => response.json())
-          .then((data) => {
+Promise.all([
+  fetch("https://api.github.com/repos/Mattk70/Chirpity-Electron/releases?page=1&per_page=100").then(r => r.json()),
+  fetch("https://api.github.com/repos/Mattk70/Chirpity-Electron/releases?page=2&per_page=100").then(r => r.json())
+])
+  .then(pages => {
+    const data = pages.flat(); // merge page 1 + page 2
+
             let limit = 5; // last 5 releases
             for (let i = 0; i < data.length; i++) {
               const release = data[i];
@@ -1303,7 +1305,8 @@ Because the installer hasn't been digitally signed, there are some additional st
               if (release.assets.length) {
                 // download count
                 release.assets.forEach((asset) => {
-                  if (asset.browser_download_url.endsWith("pkg")) {
+                  if (asset.browser_download_url.endsWith("pkg") 
+                      || asset.browser_download_url.endsWith("dmg")) {
                     pkgCount+=asset.download_count;
                     i === 0 && (currentCount+=asset.download_count);
                   } else if (asset.browser_download_url.endsWith("exe")) {
