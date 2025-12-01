@@ -1083,58 +1083,12 @@
         let macHTML;
         if (navigator.userAgent.includes("Macintosh")) {
           macHTML = `
-  <div class="alert alert-warning">Be careful to select the correct installer. Chirpity-X.Y.Z<font color="red">-arm64</font>.pkg is built for Apple Silicon and will not work on older Intel Macs. 
-	Chirpity-X.Y.Z.pkg is for Intel Macs and will not work on Apple Silicon (M-series) machines.</div>
-Because the installer hasn't been digitally signed, there are some additional steps needed over a standard installation. What follows is a walk through.<br />
-<b> Please follow the instructions carefully!</b>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-	<h2 class="accordion-header">
-	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-		Instructions for OSX Sequoia and later
-	      </button>
-	</h2>
-  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
+  <div class="alert alert-warning">Be careful to select the correct installer. Chirpity<font color="red">-arm64</font>.dmg is built for Apple Silicon and will not work on older Intel Macs. 
+	Chirpity<font color="red">-x64</font>.dmg is for Intel Macs and will not work on Apple Silicon (M-series) machines.</div>
 
-		<ol>
-		<li>Attempt to open the application, you should see a warning like this. Select 'Done':</li>
-		<img src="./step1.png"  alt="macOS cannot verify the developer of chirpity-x.x.x-arm64.pkg">
-		<li><b>After</b> doing this, open the settings app and find &quot;Privacy and Security&quot;
-		<li>Near the end of the settings pane, you'll find an option to allow the installer to run:<br clear="all">
-		<img src="step2.png" alt="settings">
-		<li>Now when you open the installer file, you will see the following warning. If you select "Open Anyway" the installer will run:<br clear="all">
-		<img src="step3.png" alt="Open anyway">
-		</ol>
-
-
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Instructions for older OSX versions
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-	<ol>
-	  <li>Navigate to your Downloads folder</li>
-	  <li><b>Important!</b> Hold down the 'control ^' key and then select the pkg file</li>
-	  <li>A menu should appear, select the top link 'Open'</li>
-	  <li>A warning will be displayed, like this one:</li>
-	  <img src="img/mac-warning.png" height="418" width="328" alt="macOS cannot verify the developer of chirpity-x.x.x-arm64.pkg">
-	  <li>If you choose to select 'open' the installer will run - just follow the installation prompts</li>
-	</ol>
-
-	</div>
-    </div>
-  </div>
-</div>
 `;
 
-          macHTML += `<p>If you have any issues with the installation after following these instructions, let me know by <a href="https://github.com/Mattk70/Chirpity-Electron/issues">opening an issue on GitHub</a></p>      `;
+          macHTML += `<p>If you have any issues with the installation, let me know by <a href="https://github.com/Mattk70/Chirpity-Electron/issues">opening an issue on GitHub</a></p>      `;
 
           // Create a new div element to hold the HTML
           var container = document.getElementById("installation-warnings");
@@ -1173,7 +1127,7 @@ Because the installer hasn't been digitally signed, there are some additional st
                 } else {
                   winPortableDownloadLink = assets[i].browser_download_url;
                 }
-              } else if (assets[i].name.endsWith("pkg")) {
+              } else if (assets[i].name.endsWith("dmg")) {
                 if (assets[i].name.includes("arm64")) {
                   macDownloadLink = assets[i].browser_download_url;
                 } else {
