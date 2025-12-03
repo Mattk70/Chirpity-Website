@@ -1083,9 +1083,13 @@
         let macHTML;
         if (navigator.userAgent.includes("Macintosh")) {
           macHTML = `
-  <div class="alert alert-warning">Be careful to select the correct installer. Chirpity<font color="red">-arm64</font>.dmg is built for Apple Silicon and will not work on older Intel Macs. 
-	Chirpity<font color="red">-x64</font>.dmg is for Intel Macs and will not work on Apple Silicon (M-series) machines.</div>
-
+  <div class="alert alert-warning">
+    <ol>
+      <li>Be careful to select the correct installer. Chirpity<font color="red">-arm64</font>.dmg is built for Apple Silicon and will not work on older Intel Macs. 
+    Chirpity<font color="red">-x64</font>.dmg is for Intel Macs and will not work on Apple Silicon (M-series) machines.</li>
+      <li>If you are upgrading from an older 'pkg' file, please uninstall the previous version first by moving it to the trash.</li>
+    </ol>
+  </div>
 `;
 
           macHTML += `<p>If you have any issues with the installation, let me know by <a href="https://github.com/Mattk70/Chirpity-Electron/issues">opening an issue on GitHub</a></p>      `;
