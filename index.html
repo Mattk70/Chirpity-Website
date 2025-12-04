@@ -1084,10 +1084,13 @@
         if (navigator.userAgent.includes("Macintosh")) {
           macHTML = `
   <div class="alert alert-warning">
+    <h6>Upgrading from previous versions</h6>
     <ol>
-      <li>Be careful to select the correct installer. Chirpity<font color="red">-arm64</font>.dmg is built for Apple Silicon and will not work on older Intel Macs. 
-    Chirpity<font color="red">-x64</font>.dmg is for Intel Macs and will not work on Apple Silicon (M-series) machines.</li>
-      <li>If you are upgrading from an older 'pkg' file, please uninstall the previous version first by moving Chirpity from the Applications folder to the trash.</li>
+      <li><b> <font color="red">There is no direct upgrade path from Chirpity versions prior to 4.2.0</font></b>. 
+        If you are running version 2.0.0 or later, you should first install 4.2.0 for
+        <a href="https://github.com/Mattk70/Chirpity-Electron/releases/download/v4.2.0/Chirpity-4.2.0.pkg">Intel Mac</a> 
+        or <a href="https://github.com/Mattk70/Chirpity-Electron/releases/download/v4.2.0/Chirpity-4.2.0-arm64.pkg">M-Series Mac</a>.</li>
+      <li>If you are upgrading from version 4.2.0 or later, please uninstall the previous version first by moving Chirpity from the Applications folder to the trash.</li>
     </ol>
     <img src="img/applications.png" class="img-fluid rounded d-block mx-auto" alt="Deleting Chirpity from the Applications folder">
   </div>
