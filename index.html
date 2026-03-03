@@ -211,7 +211,7 @@
           <div class="modal-content">
             <div class="modal-body">
               <!-- Larger image -->
-              <img src="screenshot.png" class="img-fluid" alt="Larger Image" />
+              <img id="modalScreenshot" src="screenshot-en.png" class="img-fluid" alt="Larger Image" />
             </div>
           </div>
         </div>
@@ -223,7 +223,8 @@
       <div class="w-100 text-center">
         <a href="#screenshotImageModal" data-bs-toggle="modal">
           <img
-            src="screenshot.png"
+            id="mainScreenshot"
+            src="screenshot-en.png"
             class="img-fluid rounded justify-content-center"
             style="max-height: 50vh"
             alt="Chirpity screenshot showing spectrogram, results table and context menu"
@@ -454,8 +455,8 @@
       </div>
 
       <!-- Member Features -->
-      <h4>Member-only Features</h4>
-      <p>The following capabilities are added when you become a Chirpity member through <a href="https://www.buymeacoffee.com/matthew_kirkland" target="_blank">Buy-me-a-coffee</a>. All these additional features are available for a trial period when you first install the application:</p>
+      <h4>Members Features</h4>
+      <p>The following capabilities are added when you become a Chirpity member through <a href="https://www.buymeacoffee.com/matthew_kirkland" target="_blank">Buy-me-a-coffee</a>. All these additional features are available for a two week trial period when you first install the application:</p>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
@@ -501,6 +502,20 @@
             </fieldset>
           </div>
           <div class="col-12 col-md-6">
+            <fieldset class="border rounded mb-3 p-2">
+              <legend class="h6">Vector Search</legend>
+              <ul>
+                <li>
+                  <!--span class="badge text-bg-danger">New!</span -->
+                  <strong>Find similar sounds:</strong> Highlight a segment of audio and find similar sounds in the recording, even if they were not detected by the classifier.
+                </li>
+                <li>
+                  <strong>Agile modelling:</strong> Use vector search to quickly find more examples of a species in your recording, and add these to a training set for a custom classifier.
+                </li>
+              </ul>
+            </fieldset>
+          </div>          
+          <div class="col-12 col-md-6">
             <fieldset class="border rounded mb-3 p-1">
               <legend class="h6">Workflow enhancements</legend>
               <ul>
@@ -535,7 +550,7 @@
           <table role="table" class="table table-striped">
             <caption>
               <b>Machine Specs: </b><i><small>1.CPU: 8th Gen, Core i5 8400, 6-core "Coffee Lake", GPU:
-                  Nvidia 1660 Super. 2. 2022 M2 Macbook Pro 13", 8GB RAM</small></i>
+                  Nvidia 1660 Super. 2. 2022 M2 MacBook Pro 13", 8GB RAM</small></i>
             </caption>
             <thead>
               <tr>
@@ -717,7 +732,7 @@
         <!-- <div class="col-auto">
           <div class="card" style="width: 20rem">
             <div style="position: relative;">
-              <img src="img/Rhinolophus_hipposideros.png" class="card-img-top" alt="Chirpity Batpack">
+              <img src="img/Rhinolophus_hipposideros.png" class="card-img-top" alt="Chirpity BatPack">
               <div style="
                 position: absolute;
                 bottom: 0;
@@ -1106,7 +1121,7 @@
       <li><b> <font color="red">There is no direct upgrade path from Chirpity versions prior to 4.2.0</font></b>. 
         If you are running version 2.0.0 or later, you should first install 4.2.0 for
         <a href="https://github.com/Mattk70/Chirpity-Electron/releases/download/v4.2.0/Chirpity-4.2.0.pkg">Intel Mac</a> 
-        or <a href="https://github.com/Mattk70/Chirpity-Electron/releases/download/v4.2.0/Chirpity-4.2.0-arm64.pkg">M-Series Mac</a>. These versions were not digially signed, so the steps below should be followed in addition:</li>
+        or <a href="https://github.com/Mattk70/Chirpity-Electron/releases/download/v4.2.0/Chirpity-4.2.0-arm64.pkg">M-Series Mac</a>. These versions were not digitally signed, so the steps below should be followed in addition:</li>
         <div class="accordion" id="accordionExample">
   <div class="accordion-item">
 	<h2 class="accordion-header">
@@ -1416,7 +1431,7 @@ Promise.all([
           });
       </script>
 
-      <!-- theme toggler -->
+      <!-- theme Toggler -->
       <script>
         const themeToggle = document.getElementById("themeToggle");
 
