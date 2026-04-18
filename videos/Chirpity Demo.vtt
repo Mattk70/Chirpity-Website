@@ -1,0 +1,76 @@
+WEBVTT
+
+0:00:00.000 --> 0:00:08.032
+Open a file
+
+0:00:08.032 --> 0:00:13.031
+As this is a compressed file, Chirpity will extract it.
+
+0:00:15.031 --> 0:00:18.030
+Once extracted, the spectrogram is created.
+
+0:00:19.030 --> 0:00:22.629
+Exploring the transport controls, we can see the file name, play / pause, spectrogram zoom and filter panel
+
+0:00:22.629 --> 0:00:29.628
+The filter panel allows you to turn on Nocmig mode, which limits file analysis to night time periods
+
+0:00:30.628 --> 0:00:40.626
+Let's analyse the file.
+
+0:00:46.625 --> 0:00:50.624
+When complete, any detections made appear below the spectrogram. Chirpity will jump to the location of the first detection and highlight it.
+
+0:00:50.624 --> 0:00:52.624
+A right-click on the highlighted area opens a context menu.
+
+0:00:52.624 --> 0:00:54.624
+Let's play this clip
+
+0:00:58.622 --> 0:01:01.015
+Selecting another species that's been detected will instantly move you to that detection in the file
+
+0:01:08.587 --> 0:01:15.019
+Click the expand icon at the top right of the spectrogram to enter fullscreen mode
+
+0:01:17.685 --> 0:01:20.685
+Plus and minus keys zoom the spectrogram
+
+0:01:21.018 --> 0:01:24.517
+Hold shift while pressing plus or minus to change the FFT window
+
+0:01:27.283 --> 0:01:30.283
+Return to results view by pressing the fullscreen icon again
+
+0:01:32.649 --> 0:01:37.648
+Another context menu option allows you to analyse just the highlighted portion of audio
+
+0:01:47.279 --> 0:01:51.278
+You can also save the record to the archive database from here.
+
+0:01:53.278 --> 0:01:58.010
+In the popup, you can tag the record, change the ID, add a call count and any comments you want to add.
+
+0:02:01.776 --> 0:02:04.776
+A confirmation will appear...
+
+0:02:11.608 --> 0:02:14.607
+You can use the filter panel to apply audio filters and reduce background noise.
+
+0:02:24.672 --> 0:02:35.003
+These filters can be used to fine tune the audio for the best detection performance.
+
+0:02:43.535 --> 0:02:49.567
+After re-running the analysis with the filters applied, we can see that two Spotted Crake calls were detected this time.
+
+0:03:10.463 --> 0:03:15.462
+After saving records, they can be explored whenever you come back to the application, and you will find them under the Records menu.
+
+0:03:27.226 --> 0:03:33.225
+Nocmig mode suppresses daylight records, so disable it to see them
+
+0:03:44.089 --> 0:03:47.089
+alongside any previously saved records...
+
+0:03:49.088 --> 0:03:51.726
+Thanks for watching!
