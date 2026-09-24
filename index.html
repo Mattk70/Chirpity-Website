@@ -7,7 +7,7 @@
         "@context": "http://schema.org/",
         "@type": "Product",
         "name": "Chirpity",
-        "description": "Chirpity is a desktop application powered by Machine Learning to identify bird calls in audio recordings. Perfect for enthusiasts and researchers.",
+        "description": "Chirpity is a desktop application powered by Machine Learning to identify bird calls and other animal sounds in audio recordings. Perfect for enthusiasts and researchers.",
         "image": "https://chirpity.net/screenshot.png",
         "operatingSystem": ["Windows", "Mac", "Linux"],
         "offers": {
@@ -26,7 +26,7 @@
 
     <meta
       name="description"
-      content="Experience the magic of bird identification through sound with Chirpity! This desktop application harnesses cutting-edge Machine Learning to identify bird calls in audio recordings. Tailored for enthusiasts and researchers, choose between BirdNET or our native model, perfect for Nocmig - tracking Nocturnal Flight Calls. Explore features like multiple language labels and customisable export options. Available for Windows and Mac. Dive into the world of audio-based bird identification - download now!"
+      content="Experience the magic of bird identification through sound with Chirpity! This desktop application harnesses cutting-edge Machine Learning to identify bird calls and other animal sounds in audio recordings. Tailored for enthusiasts and researchers, choose between BirdNET or our native model, perfect for Nocmig - tracking Nocturnal Flight Calls. Explore features like multiple language labels and customisable export options. Available for Windows and Mac. Dive into the world of audio-based bird identification - download now!"
     />
     <title>Chirpity - Identify Birds by Sound</title>
     <link
@@ -219,7 +219,7 @@
       </div>
       <h1 class="display-4">Chirpity: Identify Birds by Sound</h1>
       <p class="lead">
-        Using Machine Learning to identify bird calls in audio recordings
+        Using Machine Learning to identify bird calls and other animal sounds in audio recordings
       </p>
       <div class="w-100 text-center">
         <a href="#screenshotImageModal" data-bs-toggle="modal">
@@ -341,7 +341,7 @@
                 <li>
                   The interface can be translated into any one of 11 languages
                 </li>
-                <li>Birds' common names are available in 28 languages.</li>
+                <li>Common names can be translated into any of 30 languages.</li>
               </ul>
             </fieldset>
             <fieldset class="border rounded mb-3 p-1">
@@ -471,6 +471,11 @@
                   <strong>Show all detections:</strong> View all detections in the displayed timeline, not just the currently selected one.
                 </li>
                 <li><strong>Combine detections:</strong> Show the results from multiple classifiers in a single results view.</li>
+                <li>
+                  <strong>Filter lists by class:</strong> For models trained to recognise
+                  more than birds (currently Perch and BirdNET+), you can select whether to include or exclude specific 
+                  taxonomic classes: Birds, Amphibians, Insects, Mammals and Reptiles
+                </li>
               </ul>
             </fieldset>
           </div>
@@ -484,6 +489,9 @@
                 </li>
                 <li>
                   <strong>Import and export:</strong> Easily share your trained models with others by exporting and importing them.
+                </li>
+                <li>
+                  <strong>BirdNET+ (a.k.a BirdNET 3.0 ) developer preview 3.1</strong> Get early access to the forthcoming BirdNET+ 3.0 model.
                 </li>
               </ul>
             </fieldset>
@@ -922,6 +930,13 @@
             </div>
             <!-- Add more columns for additional images as needed -->
           </div>
+        </div>
+        <div class="alert alert-warning">
+          <h5>Chirpity on older machines</h5>
+          Windows versions of Chirpity 6+ require the Visual C++ 2019 runtime (or later).
+          If are installing on a machine around 10 or more years old, you may see an error about AVX2 when you launch the application.
+          In that case, you should ensure you have a recent version of this library installed.
+          A permanent link to the latest version of the library is here: <a href="https://aka.ms/vc14/vc_redist.x64.exe">Microsoft Visual C++ runtime</a>
         </div>
 <p class="mt-3">If you have any issues with the installation after following these instructions, let me know by <a href="https://github.com/Mattk70/Chirpity-Electron/issues">opening an issue on GitHub</a></p>  
     `;
